@@ -2,7 +2,7 @@ const auction = require("express");
 const app = auction();
 const server = require("http").createServer(app);
 const io = require("socket.io").listen(server);
-const port = 3000;
+const port = 80;
 
 const currentBid = [];
 
