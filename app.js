@@ -35,4 +35,10 @@ io.on("connection", (socket) => {
   });
 });
 
+io.on("connection", (socket) => {
+  socket.on("start", (start) => {
+    io.emit("start", start);
+  });
+});
+
 server.listen(port, () => console.log("Server running on Port: " + port));
