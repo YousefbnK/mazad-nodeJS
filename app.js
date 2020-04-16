@@ -36,8 +36,17 @@ io.on("connection", (socket) => {
 });
 
 io.on("connection", (socket) => {
-  socket.on("start", (start) => {
-    io.emit("start", start);
+  console.log("Yaaaas");
+  socket.on("Start Auction", (start) => {
+    console.log(start);
+    io.emit("Start Auction", start);
+  });
+});
+
+io.on("connection", (socket) => {
+  socket.on("Stop Auction", (stop) => {
+    console.log(stop);
+    io.emit("Stop Auction", stop);
   });
 });
 
